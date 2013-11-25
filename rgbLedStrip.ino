@@ -43,7 +43,7 @@ void loop(){
     sensorMax=value;
   }
   
-  if ((value>(20+sensorValue)) || (value <(sensorValue-20))){
+  if ((value>(10+sensorValue)) || (value <(sensorValue-10))){
     sensorValue = value;
     Serial.println(value);
     printValue = map(value, sensorMin, sensorMax, 0, 255);
@@ -84,7 +84,7 @@ void loop(){
   }
   
   pinta();
-  delay(10);
+  delay(40);
 }
 
 void pinta(){
